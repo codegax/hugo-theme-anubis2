@@ -11,7 +11,7 @@
 </head>
 <body>
     <a class="skip-main" href="#main">{{ i18n "skipToContent" }}</a>
-    <div class="container">
+    <div class="container" style="--max-width: {{.Site.Params.maxWidth | default "42em"}};">
         <header class="common-header">
             {{ block "header" . }}
                 {{ partial "header.html" . }}
@@ -23,6 +23,7 @@
         {{ block "footer" . }}
             {{ partial "footer.html" . }}
         {{ end }}
+    <div class="container">
     </div>
 </body>
 </html>
